@@ -77,7 +77,7 @@ const AboutUs = () => {
         </p>
       </div>
       <div class="about-us-img-wrapper">
-        <img alt='logo' src="https://res.cloudinary.com/daesz5k6b/image/upload/v1700041053/nvnq9jdnrmswwh9jddul.png" />
+        <img alt='logo' src="https://res.cloudinary.com/daesz5k6b/image/upload/v1706480246/kbisczlfdbvdutp3dwqn.jpg" />
       </div>
     </div>
   </section>
