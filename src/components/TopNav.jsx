@@ -25,11 +25,7 @@ const TopNav = () => {
       </div>
       <div className="bg-gray-200 rounded-full flex justify-center m-auto  items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]">
       
-        <input
-          className="bg-transparent p-2 w-full focus:outline-none "
-          type="text"
-          placeholder="search meals"
-        />
+       
       </div>
       <Link to="/login">
         <button className="bg-[#c29525] text-white hidden md:flex ml-auto py-2  rounded-full">
