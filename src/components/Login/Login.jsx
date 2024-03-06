@@ -3,6 +3,7 @@ import axios from "axios";
 import joi from "joi";
 import { useNavigate } from "react-router-dom";
 import stsyels from "./login.module.css";
+import "./login.css";
 import { Link } from "react-router-dom";
 
 export default function Login({ saveUSerData }) {
@@ -65,22 +66,11 @@ export default function Login({ saveUSerData }) {
     setUser(myUser);
   };
   return (
-    <div className="   d-flex justify-content-center  align-items-center">
-      <div
-        className={`w-100 row  g-3 align-items-center py-5 px-2  my-4 ${stsyels.info}`}
-      >
-        <div className=" col-md-6 ">
-          <h1>Welcome Ai-Architect</h1>
-          <p className=" text-muted py-2 ">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-          Reprehenderit <br />Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-          Reprehenderit
-          </p>
-          <div className="  text-center">
-            <img src="https://res.cloudinary.com/daesz5k6b/image/upload/v1703109277/qq2rauho2rngbr3mw0e9.jpg" alt="" />
-          </div>
-        </div>
-        <div className="col-md-6   ">
+    <div className="h-screen d-flex justify-content-center  align-items-center">
+      <div className="text-center h-screen form_cont">
+        <img src="https://res.cloudinary.com/daesz5k6b/image/upload/v1703109277/qq2rauho2rngbr3mw0e9.jpg" alt="" />
+<div>
+          <form className=" " onSubmit={submitFormData}>
           <h4 className=" text-muted  text-center ">Login Form</h4>
           {errorsList.map((error, index) => (
             <div
@@ -98,8 +88,7 @@ export default function Login({ saveUSerData }) {
           ) : (
             ""
           )}
-          <form className=" " onSubmit={submitFormData}>
-            <div className="input-data my-2">
+            <div className="form_input">
               <label htmlFor="email">Email</label>
               <input
                 onChange={getInputValue}
@@ -108,7 +97,7 @@ export default function Login({ saveUSerData }) {
                 name="email"
               />
             </div>
-            <div className="input-data my-2">
+            <div className="form_input">
               <label htmlFor="password">Password</label>
               <input
                 onChange={getInputValue}
@@ -121,12 +110,12 @@ export default function Login({ saveUSerData }) {
               <div>
                 don't have an account ? <Link to='/register' onClick={goToRegister}>Sign Up</Link>
               </div>
-              <button className="btn btn-info  float-end">
+              <button className="btn btn-info float-end">
                 {loading ? <i className="fas fa-spinner fa-spin"></i> : "Login"}
               </button>
             </div>
           </form>
-        </div>
+</div>
       </div>
     </div>
   );
